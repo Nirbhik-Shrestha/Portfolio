@@ -2,6 +2,8 @@
 node_modules
 dist
 coverage/
+full.zip
+portfolio-htdocs.zip
 *.tsbuildinfo
 vite.config.ts.timestamp-*
 
@@ -35,4 +37,4 @@ Thumbs.db
 TODO.md
 
 # Personal files
-public/Nirbhik Resume.pdf
+public/Nirbhik_Shrestha_Resume.pdf

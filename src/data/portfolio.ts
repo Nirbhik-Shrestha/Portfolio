@@ -113,9 +113,8 @@ export const site = {
   github: GITHUB_URL,
   /** The PDF goes in /public with exactly this name. */
   resumeUrl: '/Nirbhik_Shrestha_Resume.pdf',
-  // TODO: set this to your real deployed URL (no trailing slash). Used for the
-  // canonical link, Open Graph/Twitter image URLs and sitemap.xml.
-  url: 'https://nirbhik-shrestha.vercel.app',
+  /** The deployed URL (no trailing slash). Used for the canonical link, Open Graph/Twitter image URLs and sitemap.xml. */
+  url: 'https://nirbhikshrestha.com.np',
 }
 
 /* ───────────────────────────── SEO ───────────────────────────── */
