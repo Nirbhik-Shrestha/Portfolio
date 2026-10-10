@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+
+/* Dark mode is class-based (<html class="dark">) so the toggle can override the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ───────────── Design tokens ─────────────
+ * Semantic colours swap between themes; components only use these names
+ * (bg-page, bg-surface, text-fg, text-muted, border-line, text-accent …).
+ * Accent: teal. All text pairs meet WCAG AA contrast in both themes.
+ */
+:root {
+  --page: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --line: #e2e8f0;
+  --fg: #0f172a;
+  --muted: #475569;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-fg: #ffffff;
+  --code-key: #0369a1;
+  --code-string: #b45309;
+  --code-keyword: #7c3aed;
+  color-scheme: light;
+}
+
+.dark {
+  --page: #0b1120;
+  --surface: #111a2e;
+  --surface-2: #17223a;
+  --line: #22304d;
+  --fg: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-strong: #5eead4;
+  --accent-fg: #042f2e;
+  --code-key: #7dd3fc;
+  --code-string: #fcd34d;
+  --code-keyword: #c4b5fd;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-fg: var(--accent-fg);
+  --color-code-key: var(--code-key);
+  --color-code-string: var(--code-string);
+  --color-code-keyword: var(--code-keyword);
+}
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --animate-blink: blink 1.05s step-end infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+/* Centered page column with a 16px gutter on phones. */
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Faint grid behind the hero, faded out at the edges. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 75%);
+}
+
+@layer base {
+  html {
+    /* Keeps anchored sections clear of the fixed navbar. */
+    scroll-padding-top: 5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background-color: var(--page);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--accent) 30%, transparent);
+  }
+
+  /* One clear, consistent focus ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Belt and braces: kill CSS animations/transitions for users who ask for less motion.
+   (Framer Motion is handled separately via <MotionConfig reducedMotion="user">.) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

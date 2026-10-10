@@ -1,0 +1,26 @@
+<!-- TODO: placeholder image. Replace with a real screenshot (1200×750, .webp/.jpg) and update the "image" path in src/data/portfolio.ts. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g opacity="0.12" stroke="#ffffff">
+    <path d="M0 125H1200M0 250H1200M0 375H1200M0 500H1200M0 625H1200M200 0V750M400 0V750M600 0V750M800 0V750M1000 0V750"/>
+  </g>
+  <g transform="translate(150 120)">
+    <rect width="900" height="510" rx="18" fill="#0b1120" fill-opacity="0.55" stroke="#ffffff" stroke-opacity="0.25"/>
+    <rect width="900" height="48" rx="18" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="32" cy="24" r="7" fill="#ff5f57"/><circle cx="56" cy="24" r="7" fill="#febc2e"/><circle cx="80" cy="24" r="7" fill="#28c840"/>
+    <rect x="40" y="96" width="320" height="20" rx="10" fill="#ffffff" fill-opacity="0.25"/>
+    <rect x="40" y="132" width="220" height="14" rx="7" fill="#ffffff" fill-opacity="0.15"/>
+    <rect x="40" y="190" width="380" height="270" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="450" y="190" width="410" height="125" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="450" y="335" width="410" height="125" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  </g>
+  <text x="600" y="395" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="72" font-weight="800" fill="#ffffff">DaaktarSahaab</text>
+  <text x="600" y="450" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="28" font-weight="500" fill="#ffffff" fill-opacity="0.85">Doctor Appointment &amp; Heart Disease Detection</text>
+  <text x="600" y="690" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="22" fill="#ffffff" fill-opacity="0.7">screenshot coming soon</text>
+</svg>

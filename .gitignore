@@ -1,0 +1,38 @@
+# Dependencies & build output
+node_modules
+dist
+coverage/
+*.tsbuildinfo
+vite.config.ts.timestamp-*
+
+# Environment variables (keep the example)
+*.local
+.env
+.env.*
+!.env.example
+
+# Deploy tooling
+.vercel
+.netlify
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Private notes
+TODO.md
+
+# Personal files
+public/Nirbhik Resume.pdf
