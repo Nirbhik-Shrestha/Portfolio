@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Analytics } from '@vercel/analytics/react'
 // Self-hosted variable fonts: no third-party requests, and only the needed subsets download.
 import '@fontsource-variable/inter'
 import '@fontsource-variable/jetbrains-mono'
@@ -9,5 +10,6 @@ import App from './App'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
+    <Analytics />
   </StrictMode>,
 )
