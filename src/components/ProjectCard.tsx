@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     <article
       className={cx(
         card,
-        'group flex h-full flex-col overflow-hidden transition duration-300 hover:border-accent/50 hover:shadow-xl hover:shadow-black/5 motion-safe:hover:-translate-y-1 dark:hover:shadow-black/30',
+        'group relative flex h-full flex-col overflow-hidden transition duration-300 hover:border-accent/50 hover:shadow-xl hover:shadow-black/5 motion-safe:hover:-translate-y-1 dark:hover:shadow-black/30',
       )}
     >
       <div className="aspect-[16/10] overflow-hidden border-b border-line bg-surface-2">
@@ -40,14 +40,25 @@ export default function ProjectCard({ project }: { project: Project }) {
         {(github || demo) && (
           <div className="mt-6 flex flex-wrap gap-3">
             {github && (
-              <a href={github} target="_blank" rel="noopener noreferrer" className={button.small}>
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cx(button.small, 'relative z-10')}
+              >
                 <Icon name="github" className="h-4 w-4" />
                 GitHub
                 <span className="sr-only"> repository for {title} (opens in a new tab)</span>
               </a>
             )}
             {demo && (
-              <a href={demo} target="_blank" rel="noopener noreferrer" className={button.small}>
+              // The ::after overlay stretches this link over the whole card.
+              <a
+                href={demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cx(button.small, 'after:absolute after:inset-0')}
+              >
                 <Icon name="external" className="h-4 w-4" />
                 Live Demo
                 <span className="sr-only"> of {title} (opens in a new tab)</span>

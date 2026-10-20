@@ -256,32 +256,6 @@ export const experience: ExperienceItem[] = [
 
 export const projects: Project[] = [
   {
-    title: 'DaaktarSahaab',
-    subtitle: 'Doctor Appointment System with Heart Disease Detection',
-    description:
-      'Full-stack PHP/MySQL web app for appointment booking and doctor schedule management, with an integrated Python Random Forest model that predicts heart disease from clinical data. Features session management, doctor/patient management and scheduling.',
-    tags: ['PHP', 'MySQL', 'Python', 'Machine Learning'],
-    // TODO: replace the placeholder with a real screenshot.
-    image: '/projects/daaktarsahaab.svg',
-    imageAlt: 'Screenshot of the DaaktarSahaab doctor appointment dashboard',
-    // TODO: check the repo name and add a live demo URL (or delete the demo line to hide the button).
-    github: `${GITHUB_URL}/daaktarsahaab`,
-    demo: 'https://example.com/daaktarsahaab',
-  },
-  {
-    title: 'Sangeet',
-    subtitle: 'Online Music Instrument Store',
-    description:
-      'Ecommerce site built with PHP and MySQL featuring cart, stock management, cookies/session handling and payment integration.',
-    tags: ['PHP', 'MySQL', 'Ecommerce'],
-    // TODO: replace the placeholder with a real screenshot.
-    image: '/projects/sangeet.svg',
-    imageAlt: 'Screenshot of the Sangeet music instrument store homepage',
-    // TODO: check the repo name and add a live demo URL (or delete the demo line to hide the button).
-    github: `${GITHUB_URL}/sangeet`,
-    demo: 'https://example.com/sangeet',
-  },
-  {
     title: 'Aashraya',
     subtitle: 'Mental Health Awareness and Support System',
     description:
@@ -292,7 +266,31 @@ export const projects: Project[] = [
     imageAlt: 'Screenshot of the Aashraya mood logging dashboard',
     // TODO: check the repo name and add a live demo URL (or delete the demo line to hide the button).
     github: `${GITHUB_URL}/aashraya`,
-    demo: 'https://example.com/aashraya',
+    demo: 'https://aashraya-app.vercel.app/',
+  },
+  {
+    title: 'DaaktarSahaab',
+    subtitle: 'Doctor Appointment System with Heart Disease Detection',
+    description:
+      'Full-stack PHP/MySQL web app for appointment booking and doctor schedule management, with an integrated Python Random Forest model that predicts heart disease from clinical data. Features session management, doctor/patient management and scheduling.',
+    tags: ['PHP', 'MySQL', 'Python', 'Machine Learning'],
+    // TODO: replace the placeholder with a real screenshot.
+    image: '/projects/daaktarsahaab.svg',
+    imageAlt: 'Screenshot of the DaaktarSahaab doctor appointment dashboard',
+    // TODO: check the repo name. Add a `demo` URL once the project is live.
+    github: `${GITHUB_URL}/daaktarsahaab`,
+  },
+  {
+    title: 'Sangeet',
+    subtitle: 'Online Music Instrument Store',
+    description:
+      'Ecommerce site built with PHP and MySQL featuring cart, stock management, cookies/session handling and payment integration.',
+    tags: ['PHP', 'MySQL', 'Ecommerce'],
+    // TODO: replace the placeholder with a real screenshot.
+    image: '/projects/sangeet.svg',
+    imageAlt: 'Screenshot of the Sangeet music instrument store homepage',
+    // TODO: check the repo name. Add a `demo` URL once the project is live.
+    github: `${GITHUB_URL}/sangeet`,
   },
 ]
 
