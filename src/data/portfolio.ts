@@ -272,8 +272,8 @@ export const projects: Project[] = [
     title: 'DaaktarSahaab',
     subtitle: 'Doctor Appointment System with Heart Disease Detection',
     description:
-      'Full-stack PHP/MySQL web app for appointment booking and doctor schedule management, with an integrated Python Random Forest model that predicts heart disease from clinical data. Features session management, doctor/patient management and scheduling.',
-    tags: ['PHP', 'MySQL', 'Python', 'Machine Learning'],
+      'MERN-stack web app for appointment booking and doctor schedule management, with an integrated Js Random Forest model that predicts heart disease from clinical data. Features session management, doctor/patient management and scheduling.',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Machine Learning'],
     // TODO: replace the placeholder with a real screenshot.
     image: '/projects/daaktarsahaab.svg',
     imageAlt: 'Screenshot of the DaaktarSahaab doctor appointment dashboard',
