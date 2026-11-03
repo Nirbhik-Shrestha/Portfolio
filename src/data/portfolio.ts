@@ -279,6 +279,7 @@ export const projects: Project[] = [
     imageAlt: 'Screenshot of the DaaktarSahaab doctor appointment dashboard',
     // TODO: check the repo name. Add a `demo` URL once the project is live.
     github: `${GITHUB_URL}/daaktarsahaab`,
+    demo: 'https://daaktarsahaab.vercel.app/',
   },
   {
     title: 'Sangeet',
